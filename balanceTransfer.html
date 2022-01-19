@@ -24,7 +24,7 @@
         <h4>Available Balance : <span id="balance">25000</span> PKR</h4>
     </div>
 
-    <form action="">
+    <form onsubmit="redirect()">
         <div class="input-group mb-3">
             <span class="input-group-text">Account Number</span>
             <input type="text" id="accountNumber" class="form-control" aria-label="Sizing example input"
@@ -35,13 +35,20 @@
             <input type="number" id="transferAmount" class="form-control" aria-label="Sizing example input"
                 aria-describedby="inputGroup-sizing-default">
         </div>
-        <a href="./thankYou.html" class="mt-5 btn btn-danger btn-lg btn-block">TRANSFER AMOUNT</a>
+        <button class="mt-5 btn btn-danger btn-lg btn-block">TRANSFER AMOUNT</button>
     </form>
 
 
 
 
     <script>
+        function redirect() {
+            let accountNumber = document.getElementById("accountNumber").value;
+            let transferAmount = document.getElementById("transferAmount").value;
+            window.location.href = 'thankYou.html';
+            window.alert("Transaction of " + " PKR " + transferAmount + " Made SuccessFully to " + accountNumber)
+        };
+
         $(document).ready(function () {
             let balance = $("#balance").text();
             let totalVal = $("#transferAmount")
