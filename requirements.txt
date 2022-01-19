@@ -1,0 +1,19 @@
+Make a GUI of ATM machine using HTML.
+
+First screen: The ATM says Welcome insert card and the PIN 
+should be 1234.
+
+Second screen: The ATM ask that whether you want to select 
+Current account or Saving account.
+
+Third screen: The ATM will ask for the Transaction which will
+be: Withdrawal Transaction, Money deposit, Balance Transfer,
+Balance inquiry and Billing. the atm should also tell a random
+location for another ATM if the user request that.
+
+Fourth screen: it will be according to the action that user
+perform.
+
+Fifth screen: thank you for the transaction.
+
+(all screens should have another html files)

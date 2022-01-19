@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SZABIST BANK</title>
+
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <script src="./bootstrap/jquery.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+
+    <h1 class="display-1 text-center">SZABIST BANK</h1>
+    <hr>
+    <h3 class="text-center">MONEY DEPOSIT</h3>
+    <div class="d-flex justify-content-center align-items-center">
+        <h4>Prev. Balance : <span id="balance">25000</span> PKR</h4>
+    </div>
+    <div class="m-4 row justify-content-center">
+        <div class="col-6">
+            <label for="note100">
+                <img src="./res/100.jpg" class="notes" alt="100 Rs">
+            </label>
+            <input type="number" id="note100" name="note100" min="0" max="250">
+        </div>
+        <div class="col-6">
+            <label for="note500">
+                <img src="./res/500.jpg" class="notes" alt="500 Rs">
+            </label>
+            <input type="number" id="note500" name="note500" min="0" max="50">
+        </div>
+        <div class="col-6">
+            <label for="note1000">
+                <img src="./res/1000.jpg" class="notes" alt="1000 Rs">
+            </label>
+            <input type="number" id="note1000" name="note1000" min="0" max="25">
+        </div>
+        <div class="col-6">
+            <label for="note5000">
+                <img src="./res/5000.jpg" class="notes" alt="5000 Rs">
+            </label>
+            <input type="number" id="note5000" name="note5000" min="0" max="5">
+        </div>
+
+        <a href="./thankYou.html" class="m-5 btn btn-danger">DEPOSIT</a>
+
+        <h4 class="text-center">Total Amount:
+            <span id="totalAmount"></span>
+        </h4>
+    </div>
+
+
+    <script>
+        $(document).ready(function () {
+            $("input").on('input', function () {
+                let balance = $("#balance").text();
+                let amount100 = $("#note100").val() * 100;
+                let amount500 = $("#note500").val() * 500;
+                let amount1000 = $("#note1000").val() * 1000;
+                let amount5000 = $("#note5000").val() * 5000;
+                let totalVal = amount100 + amount500 + amount1000 + amount5000;
+                $("#totalAmount").text(totalVal);
+            });
+        });
+    </script>
+</body>
+<section class="footer fixed-bottom">
+    <div class="m-2">
+        <p class="h5">Cash Withdrawal</p>
+        <p class="h2">Money Deposit</p>
+        <p class="h5">Balance Transfer</p>
+        <p class="h5">Balance Inquiry</p>
+        <p class="h5">Nearest ATM</p>
+    </div>
+    <!-- Footer -->
+    <footer class="text-center text-white" style="background-color: #dc3545;">
+      <!-- Grid container -->
+      <div class="container">
+        <!-- Section: CTA -->
+        <section class="p-2">
+          <p class="d-flex justify-content-center align-items-center">
+            <span class="lead">Muhammad Saqib <br>
+              Ammara Sheikh</span>
+          </p>
+        </section>
+        <!-- Section: CTA -->
+      </div>
+      <!-- Grid container -->
+  
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2022 Copyright: SZABIST
+      </div>
+      
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+  </section>
+</html>
